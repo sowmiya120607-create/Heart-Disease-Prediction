@@ -1,8 +1,19 @@
-# ❤️ Heart Disease Prediction Using Logistic Regression
+# ❤️ Heart Disease Risk Prediction System Using Machine Learning  
 
-## 📌 Overview
+A Machine Learning web application that predicts the likelihood of heart disease  built using Logistic Regression and deployed using Flask.
 
-This is a Machine Learning web application that predicts the likelihood of heart disease based on patient medical information. The model is built using Logistic Regression and deployed using Flask.
+## Project Highlights
+
+-Accuracy: 80.7%
+-Logistic Regression Model
+-flask Web Application
+-Responsive UI Design
+-Confidence Score Prediction
+-Heartbeat Animation
+
+## Overview
+
+This is a  Machine Learning web application that predicts the likelihood of heart disease based on patient medical information. The model is built using Logistic Regression and deployed using Flask.
 
 ## 🛠 Technologies Used
 
