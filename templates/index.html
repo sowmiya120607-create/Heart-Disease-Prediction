@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="heart">❤️</div>
+
+        <h1>Heart Disease Prediction</h1>
+
+        <p class="subtitle">
+            Predict the risk of heart disease using Machine Learning
+        </p>
+
+        <form action="/predict" method="POST">
+
+            <input type="number"
+                   name="cp"
+                   placeholder="Chest Pain Type (cp)"
+                   value="{{ cp if cp is defined else '' }}"
+                   required>
+
+            <input type="number"
+                   name="thalach"
+                   placeholder="Maximum Heart Rate (thalach)"
+                   value="{{ thalach if thalach is defined else '' }}"
+                   required>
+
+            <input type="number"
+                   step="0.1"
+                   name="oldpeak"
+                   placeholder="Oldpeak"
+                   value="{{ oldpeak if oldpeak is defined else '' }}"
+                   required>
+
+            <input type="number"
+                   name="ca"
+                   placeholder="Number of Major Vessels (ca)"
+                   value="{{ ca if ca is defined else '' }}"
+                   required>
+
+            <input type="number"
+                   name="thal"
+                   placeholder="Thal"
+                   value="{{ thal if thal is defined else '' }}"
+                   required>
+
+            <input type="number"
+                   name="age"
+                   placeholder="Age"
+                   value="{{ age if age is defined else '' }}"
+                   required>
+
+            <input type="number"
+                   name="chol"
+                   placeholder="Cholesterol"
+                   value="{{ chol if chol is defined else '' }}"
+                   required>
+
+            <button type="submit">
+                Predict
+            </button>
+
+        </form>
+
+        {% if prediction_text %}
+        <div class="result" style="color: {{ color }};">
+            {{ prediction_text }}
+        </div>
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
